@@ -8,9 +8,22 @@ export interface JournalEntry {
   fullContent: string;
   instruments: string[];
   setupsUsed: string[];
+  externalLink?: string;
 }
 
 export const journalEntries: JournalEntry[] = [
+  {
+    id: 0,
+    slug: "tradezella",
+    date: "TradeZella Journal",
+    tradesSummary: "Live external journal link to TradeZella with all your daily log entries.",
+    keyLesson: "Open in a new tab to view the full TradeZella shared journal.",
+    result: "neutral",
+    fullContent: "This entry redirects to your shared TradeZella trade journal.",
+    instruments: [],
+    setupsUsed: [],
+    externalLink: "https://app.tradezella.com/shared/c4089882/trade/a5106b5f",
+  },
   {
     id: 1,
     slug: "2026-03-28",

@@ -24,10 +24,10 @@ export default function JournalPage() {
                 A record of trades, lessons, and continuous improvement. Each entry focuses on process over results.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {journalEntries.map((entry) => (
-                <Link key={entry.id} href={`/journal/${entry.slug}`}>
+              {journalEntries.map((entry) => {
+                const card = (
                   <Card className="bg-card border-border hover:border-primary/30 transition-colors duration-300 h-full group cursor-pointer">
                     <CardHeader className="pb-3">
                       <div className="flex items-center justify-between">
@@ -40,29 +40,35 @@ export default function JournalPage() {
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div>
-                        <h4 className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-2">
-                          Trades Summary
-                        </h4>
-                        <p className="text-sm text-foreground leading-relaxed">
-                          {entry.tradesSummary}
-                        </p>
+                        <h4 className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-2">Trades Summary</h4>
+                        <p className="text-sm text-foreground leading-relaxed">{entry.tradesSummary}</p>
                       </div>
                       <div>
-                        <h4 className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-2">
-                          Key Lesson
-                        </h4>
-                        <p className="text-sm text-foreground/80 leading-relaxed">
-                          {entry.keyLesson}
-                        </p>
+                        <h4 className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-2">Key Lesson</h4>
+                        <p className="text-sm text-foreground/80 leading-relaxed">{entry.keyLesson}</p>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity pt-2">
-                        Read full entry
+                        {entry.externalLink ? "Open external journal" : "Read full entry"}
                         <ArrowRight className="h-4 w-4" />
                       </div>
                     </CardContent>
                   </Card>
-                </Link>
-              ))}
+                );
+
+                if (entry.externalLink) {
+                  return (
+                    <a key={entry.id} href={entry.externalLink} target="_blank" rel="noopener noreferrer" className="group">
+                      {card}
+                    </a>
+                  );
+                }
+
+                return (
+                  <Link key={entry.id} href={`/journal/${entry.slug}`}>
+                    {card}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

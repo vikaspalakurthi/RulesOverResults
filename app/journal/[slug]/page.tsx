@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
@@ -47,6 +47,10 @@ export default async function JournalEntryPage({
 
   if (!entry) {
     notFound();
+  }
+
+  if (entry.externalLink) {
+    redirect(entry.externalLink);
   }
 
   return (
