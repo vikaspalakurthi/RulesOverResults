@@ -1,16 +1,9 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, BookText, BookOpen, LineChart, Wallet } from "lucide-react";
+import { ExternalLink, BookText, LineChart, Wallet } from "lucide-react";
 
 const tools = [
-  {
-    name: "TradeZella Shared Journal",
-    category: "Journal",
-    icon: BookOpen,
-    description: "Access the public Tradezella journal where daily entries are synced and available for review.",
-    link: "https://app.tradezella.com/shared/c4089882/trade/a5106b5f",
-  },
   {
     name: "TradeZella",
     category: "Journaling",
