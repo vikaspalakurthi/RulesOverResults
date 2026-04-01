@@ -26,6 +26,60 @@ export const journalEntries: JournalEntry[] = [
   },
   {
     id: 1,
+    slug: "2026-03-30",
+    date: "March 30, 2026",
+    tradesSummary: "AVGO Put - Trend continuation on pullback to 8 EMA. Hit Woodie pivot target. Net +150% ($393).",
+    keyLesson: "Emotional discipline is the difference between good traders and great traders. Unrealized PnL is not real. Only PT or SL matters. Focus solely on setup execution, not outcomes.",
+    result: "win",
+    fullContent: `A challenging trade emotionally but exceptional from a process perspective. This is my first 150% win on a full position using systematic execution.
+
+**Trade Setup:**
+- Strategy: Trend Continuation
+- Instrument: AVGO Put Options
+- Setup: Pullback to 8 EMA (5-minute) at critical hourly resistance level with low volume pullback candle
+- Confluence: Multiple timeframes aligned, clear structure
+
+**Entry & Management:**
+- Entered early before the official trigger to minimize stop loss based on confluence signals
+- Target: 293.5 (Woodie pivot level)
+- Exit: Pre-placed limit order at target, filled as market moved according to delta estimation
+- Result: +150% ($393)
+
+**What Went Right:**
+1. Clean setup execution with perfect entry placement
+2. Exited at predetermined target without extending or chasing further
+3. Followed all entry and exit rules without deviation
+4. Tight risk management enabled high reward-to-risk ratio
+
+**The Real Challenge - Emotional Management:**
+This trade exposed a critical weakness: emotional discipline while in position.
+
+During the trade, unrealized PnL ranged from +120% down to +60% and back up. I found myself:
+- Constantly monitoring profit/loss
+- Fighting the urge to close early
+- Wrestling with fear of giving back gains
+- Struggling with thoughts of extending the target
+
+**Key Realization:**
+Unrealized PnL is not mine. It's noise. The only things I need to monitor are the price action targets (PT or SL). Watching the profit and loss creates emotional turbulence that clouds judgment.
+
+**The Process Check (Most Important):**
+✓ Did I follow my setup/strategy? YES
+✓ Did I follow my entry rules? YES  
+✓ Did I follow my exit rules? YES
+
+Therefore: This was a good trade, regardless of the outcome.
+
+What I must internalize: I should feel nothing about profits or losses. My only job is to execute the setup, follow the rules, and trust the system. The market rewards this process over time.
+
+**What Could Improve:**
+Next time, I will not stare at unrealized PnL. The trade will execute the same way, but my mental state will be clearer and I'll preserve energy for the next opportunity.`,
+    instruments: ["AVGO"],
+    setupsUsed: ["Trend Continuation", "Pullback"],
+    externalLink: "https://app.tradezella.com/shared/c4089882/trade/6baf1d75",
+  },
+  {
+    id: 2,
     slug: "2026-03-28",
     date: "March 28, 2026",
     tradesSummary: "2 trades on ES futures. 1 win on ORB setup, 1 scratch on failed continuation. Net +1.2R.",
@@ -54,7 +108,7 @@ This is where I need to improve. I entered before the confirmation candle closed
     setupsUsed: ["Opening Range Breakout", "Trend Continuation"],
   },
   {
-    id: 2,
+    id: 3,
     slug: "2026-03-27",
     date: "March 27, 2026",
     tradesSummary: "1 trade on NQ. Fade setup at resistance. Stopped out for -1R before market reversed in my direction.",
@@ -83,7 +137,7 @@ This wasn't a mistake in the traditional sense. My stop was placed according to 
     setupsUsed: ["Overextension Fade"],
   },
   {
-    id: 3,
+    id: 4,
     slug: "2026-03-26",
     date: "March 26, 2026",
     tradesSummary: "No trades taken. Pre-market showed choppy, range-bound conditions with no clear directional bias.",
